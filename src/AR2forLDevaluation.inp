@@ -1,0 +1,23 @@
+# MP2 scan of the potential energy curve for Ar...Ar
+    ! HF MP2 cc-pVTZ TightSCF Opt 
+
+    * xyz 0 1
+    Ar      0.000000     0.000000     0.000000
+    Ar      2.800000     0.000000     0.000000
+    *
+
+    %geom
+        Constraints
+        end
+        Scan
+            B 0 1 = 2.8, 5, 12   
+        end
+    end
+
+    %mp2
+        Density relaxed
+    end
+
+    %scf
+        ConvForced true  # Ensure SCF convergence
+    end

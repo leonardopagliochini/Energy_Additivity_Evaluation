@@ -1,0 +1,33 @@
+
+    ! HF MP2 aug-cc-pVTZ TightSCF Opt 
+     
+    * xyz 0 1
+    Cl      1.104182     0.637500     0.000000 
+    H       0.000000     0.000000     0.000000 
+
+    Cl      3.904182     0.637500     0.000000
+    H       5.008364     0.000000     0.000000 
+    *
+
+    %geom
+        Constraints
+            { B 1 0 C }  # Fix H-Cl bond distance in the first HCl
+            { B 3 2 C }  # Fix H-Cl bond distance in the second HCl
+            { A 2 0 1 C }  # Fix the H1-Cl1-Cl3 angle
+            { A 0 2 3 C }  # Fix the H2-Cl2-Cl3 angle
+            
+        end
+        Scan
+            B 1 2 = 2.8, 5, 5  # Vary the Cl-Cl distance
+        end
+    end
+ 
+    %mp2
+        Density relaxed
+    end
+
+    %scf
+        ConvForced true  # Ensure SCF convergence
+    end
+
+    

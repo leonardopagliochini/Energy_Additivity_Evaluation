@@ -1,0 +1,10 @@
+# MP2 scan of the potential energy curve for Ar...Ar
+    ! MP2 aug-cc-pVTZ TightSCF opt 
+    %geom Scan
+        B 0 1 = 2.8, 5.0, 5 # distance that will be scanned
+        end
+    end
+    * gzmt 0 1
+    Ar
+    Ar  1  3.600
+    *

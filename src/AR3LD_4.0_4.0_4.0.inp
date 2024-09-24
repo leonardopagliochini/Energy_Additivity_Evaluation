@@ -1,0 +1,7 @@
+# MP2 scan of the potential energy curve for Ar...Ar
+                ! HFLD aug-cc-pvdz aug-cc-pvdz/C verytightscf
+                *xyz 0 1
+                Ar(1)	0    0	0.00000000000000
+                Ar(2)	4.0	0    0.00000000000000
+                Ar(3)	2.0	3.4641016151377544    0.00000000000000
+                *

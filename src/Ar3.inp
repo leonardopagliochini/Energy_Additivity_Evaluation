@@ -1,0 +1,29 @@
+
+    ! HF MP2 aug-cc-pVTZ TightSCF Opt 
+
+    * xyz 0 1
+    Ar      0.000000     0.000000     0.000000
+    Ar      2.800000     0.000000     0.000000
+    Ar      1.400000     2.424871     0.000000
+    *
+
+    %geom
+        Constraints
+        end
+        Scan
+            B 0 1 = 2.8, 5, 5  
+            B 1 2 = 2.8, 5, 5  
+            B 2 0 = 2.8, 5, 5  
+        end
+    end
+
+    %mp2
+        Density relaxed
+    end
+
+    %scf
+        ConvForced true  # Ensure SCF convergence
+    end
+
+
+    
